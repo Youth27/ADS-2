@@ -31,7 +31,6 @@ double expn(double x, uint16_t count) {
     }
     return  e;
   }
-}
 
 double sinn(double x, uint16_t count) {
   double znach = 0;
