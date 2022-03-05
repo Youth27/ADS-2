@@ -6,7 +6,7 @@
 double pown(double value, uint16_t n) {
   double chisl = value;
   for (int i = 1; i < n; i++) {
-    chisl = chisl * value;	
+    chisl = chisl * value;
   }
   return chisl;
 }
@@ -19,7 +19,7 @@ uint64_t fact(uint16_t n) {
 }
 
 double calcItem(double x, uint16_t n) {
-  return pown(x,n)/fact(n);
+  return pown(x, n) / fact(n);
 }
 
 double expn(double x, uint16_t count) {
@@ -32,7 +32,7 @@ double expn(double x, uint16_t count) {
     }
     return  e;
   }
-} 
+}
 
 double sinn(double x, uint16_t count) {
   double znach = 0;
@@ -45,7 +45,7 @@ double sinn(double x, uint16_t count) {
 double cosn(double x, uint16_t count) {
   double znachh = 0;
   for (int j = 1; j <= count; j++) {
-    znachh = znachh + pown(-1, (j -1)) * calcItem(x, (2 * j - 2));
+    znachh = znachh + pown(-1, (j - 1)) * calcItem(x, (2 * j - 2));
   }
   return znachh;
 }
