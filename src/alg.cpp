@@ -25,8 +25,7 @@ double calcItem(double x, uint16_t n) {
 double expn(double x, uint16_t count) {
   double e = 0;
   uint64_t perem = 0;
-  while (perem != count) {
-    for (int i = 0; perem <= count; i++) {
+    while (perem <= count) {
       e = e + pown(x, perem) / fact(perem);
       perem = perem + 1;
     }
