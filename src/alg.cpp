@@ -5,7 +5,10 @@
 
 double pown(double value, uint16_t n) {
   double chisl = value;
-  for (int i = 1; i < n; i++) {
+  if (n == 0){
+    return 1;
+  }
+  for (uint16_t i = 1; i < n; i++) {
     chisl = chisl * value;
   }
   return chisl;
@@ -35,7 +38,7 @@ double expn(double x, uint16_t count) {
 double sinn(double x, uint16_t count) {
   double znach = 0;
   for (uint16_t i = 1; i <= count; i++) {
-    znach += pown(-1, (i - 1)) * calcItem(x, (2 * i - 1));
+    znach = znach + pown(-1, (i - 1)) * calcItem(x, (2 * i - 1));
   }
   return znach;
 }
